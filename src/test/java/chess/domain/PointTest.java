@@ -26,4 +26,8 @@ public class PointTest {
         assertThrows(IllegalArgumentException.class, () -> point.transport(direction));
     }
 
+    @Test
+    void 올바르지_않은_Point_Test() {
+        assertThrows(IllegalArgumentException.class, () -> Point.get(-1, -1));
+    }
 }
